@@ -1,5 +1,31 @@
-For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+INSTRUÇÕES DE DESIGN E DESENVOLVIMENTO
+Para todos os designs solicitados, crie páginas visualmente impactantes, modernas e únicas. Evite padrões genéricos ou repetitivos.
+Requisitos Técnicos:
 
-By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+Stack obrigatório: React + TypeScript + Vite
+Estilização: Tailwind CSS (somente classes utilitárias)
+Componentes UI: shadcn/ui (quando necessário)
+Ícones: Lucide React exclusivamente
+Imagens: Unsplash (quando apropriado)
+Hooks: React Hooks modernos (useState, useEffect, useContext, etc.)
 
-Use icons from lucide-react for logos.
+Não instale pacotes adicionais de UI, temas ou ícones sem solicitação explícita ou necessidade técnica comprovada.
+Qualidade de Código:
+
+Código limpo, modular e reutilizável
+Componentes separados com responsabilidade única
+Zero lógica duplicada
+HTML semântico
+Nomes descritivos para arquivos, funções e componentes
+Comentários apenas em trechos complexos
+TypeScript com tipagem adequada
+
+Design System:
+
+Consistência rigorosa em: tipografia, espaçamento, cores e componentes
+Design responsivo (mobile-first)
+Acessibilidade (ARIA labels quando necessário)
+Performance otimizada
+
+Entrega:
+Páginas completas, responsivas, usáveis e prontas para produção. O código deve ser production-ready desde a primeira entrega.
