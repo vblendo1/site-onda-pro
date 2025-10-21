@@ -29,14 +29,16 @@ export default function Hero() {
   return (
     <section className="relative text-white pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 overflow-hidden min-h-[90vh] md:min-h-screen flex items-center">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <iframe
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] md:w-[177.77vh] md:h-[56.25vw] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2"
-          src="https://www.youtube.com/embed/AwdGXicG5zI?autoplay=1&mute=1&loop=1&playlist=AwdGXicG5zI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <video
+          className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="https://video.zig.ht/api/videos/file/1761071939321-564642586.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-20 w-full">
