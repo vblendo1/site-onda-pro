@@ -5,13 +5,13 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all-300">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
+    <header className="bg-white/95 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all-300 w-full">
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-2 md:py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 md:gap-3">
           <img
             src="/LOGO_ONDAPRO_ROXO (3).png"
             alt="Onda Pro"
-            className="h-10 md:h-14 w-auto object-contain"
+            className="h-8 md:h-14 w-auto object-contain"
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function Header() {
 
         <button
           onClick={scrollToForm}
-          className="md:hidden bg-gradient-to-r from-[#6B3FA0] to-[#8B5FC8] text-white px-4 py-2 rounded-full font-bold text-xs transition-all-300 transform hover:scale-105"
+          className="md:hidden bg-gradient-to-r from-[#6B3FA0] to-[#8B5FC8] text-white px-3 py-2 rounded-full font-bold text-xs transition-all-300"
         >
           Catálogo
         </button>
