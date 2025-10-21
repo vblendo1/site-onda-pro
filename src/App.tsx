@@ -1,27 +1,36 @@
-import { ThemeProvider } from './contexts/ThemeContext';
-import PortfolioNav from './components/portfolio/PortfolioNav';
-import PortfolioHero from './components/portfolio/PortfolioHero';
-import AboutSection from './components/portfolio/AboutSection';
-import SkillsSection from './components/portfolio/SkillsSection';
-import ProjectsSection from './components/portfolio/ProjectsSection';
-import ContactSection from './components/portfolio/ContactSection';
-import PortfolioFooter from './components/portfolio/PortfolioFooter';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import SocialProof from './components/SocialProof';
+import Differentials from './components/Differentials';
+import ProductCatalog from './components/ProductCatalog';
+import Testimonials from './components/Testimonials';
+import BlogSection from './components/BlogSection';
+import ProcessSteps from './components/ProcessSteps';
+import LeadForm from './components/LeadForm';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <PortfolioNav />
-        <main id="home">
-          <PortfolioHero />
-          <AboutSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ContactSection />
-        </main>
-        <PortfolioFooter />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <Hero />
+        <SocialProof />
+        <Differentials />
+        <ProductCatalog />
+        <Testimonials />
+        <div id="como-funciona">
+          <ProcessSteps />
+        </div>
+        <BlogSection />
+        <div id="cadastro">
+          <LeadForm />
+        </div>
+        <About />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
