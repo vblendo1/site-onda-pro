@@ -13,7 +13,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHook((prev) => (prev + 1) % hooks.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -27,48 +27,45 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-20 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#8c4091] via-[#9d5ba3] to-[#009bac]">
-      <div className="absolute inset-0 w-full h-full overflow-hidden opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00b8cc] rounded-full blur-3xl"></div>
-      </div>
+    <section className="bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-500 lg:grid lg:h-screen lg:place-content-center">
+      <div className="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32">
+        <div className="max-w-prose text-left">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl leading-tight">
+            Venda hoje. Pague depois. <br />
+            <span className="text-white/90">Até 60 dias pra lucrar antes de investir.</span>
+          </h1>
 
-      <div className="max-w-7xl mx-auto relative z-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-left px-2 order-2 lg:order-1">
-            <div className="mb-8 md:mb-12">
-              <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white transition-opacity duration-500 leading-tight tracking-tight drop-shadow-2xl">
-                {hooks[currentHook]}
-              </p>
-            </div>
+          <p className="mt-6 text-lg text-white/90 transition-opacity duration-500">
+            {hooks[currentHook]}
+          </p>
 
-            <div className="flex flex-col gap-5 max-w-lg">
-              <button
-                onClick={scrollToForm}
-                className="bg-white hover:bg-gray-100 text-[#8c4091] font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl w-full"
-              >
-                Quero meu Catálogo Exclusivo
-              </button>
+          <div className="mt-8 flex flex-wrap gap-4 sm:mt-10">
+            <button
+              onClick={scrollToForm}
+              className="inline-block rounded-full bg-white px-6 py-3 text-base font-semibold text-purple-700 shadow-md transition hover:bg-gray-100"
+            >
+              Quero meu Catálogo Exclusivo
+            </button>
 
-              <button
-                onClick={handleWhatsApp}
-                className="border-2 border-white/90 bg-white/15 backdrop-blur-lg text-white hover:bg-white hover:text-[#8c4091] font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl w-full"
-              >
-                Falar com o Comercial Agora
-              </button>
-            </div>
+            <button
+              onClick={handleWhatsApp}
+              className="inline-block rounded-full border border-white/80 px-6 py-3 text-base font-medium text-white shadow-sm transition hover:bg-white hover:text-purple-700"
+            >
+              Falar com o Comercial Agora
+            </button>
           </div>
 
-          <div className="relative order-1 lg:order-2 flex items-center justify-center">
-            <div className="relative w-full max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-              <img
-                src="/Prisma 12 cores (1) copy.png"
-                alt="Criança com produto PRISMA"
-                className="relative z-10 w-full h-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
+          <p className="mt-4 text-sm text-white/80">
+            Sem compromisso. Atendimento exclusivo pra CNPJ varejista.
+          </p>
+        </div>
+
+        <div className="relative mt-10 md:mt-0 flex justify-center md:justify-end">
+          <img
+            src="/Prisma 12 cores (1) copy.png"
+            alt="Criança segurando kit de marcadores"
+            className="w-64 md:w-80 lg:w-96 drop-shadow-2xl rounded-xl"
+          />
         </div>
       </div>
     </section>
