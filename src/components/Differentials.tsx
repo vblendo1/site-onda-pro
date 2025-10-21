@@ -35,7 +35,7 @@ export default function Differentials() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white py-12 md:py-24 px-3 md:px-6 w-full overflow-hidden">
+    <section id="diferenciais" className="bg-gradient-to-br from-gray-50 to-white py-12 md:py-24 px-3 md:px-6 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 px-2">
