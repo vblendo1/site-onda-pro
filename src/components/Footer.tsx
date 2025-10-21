@@ -1,115 +1,65 @@
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logoWhite from "@/assets/logo-white.png";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
-export default function Footer() {
+export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#8c4091] to-[#9e61a4] text-white py-12 md:py-16 px-4 md:px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div className="sm:col-span-2">
-            <div className="mb-4">
-              <img
-                src="/ONDA PRO WHITE.png"
-                alt="Onda Pro"
-                className="h-10 md:h-12 w-auto object-contain"
-              />
-            </div>
-            <p className="text-sm md:text-base text-white/80 mb-6 max-w-md leading-relaxed">
-              Importadora de materiais escolares e office. Produtos com giro alto e margens que fazem diferença.
+    <footer id="contato" className="bg-primary text-primary-foreground py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-8 items-center">
+          <div>
+            <img src={logoWhite} alt="Onda Pro" className="h-12 mb-4" />
+            <p className="text-sm opacity-90 font-medium">
+              Produtos que movem negócios.
             </p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="font-bold mb-4">Links</h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-white/80">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">São Paulo, SP - Brasil</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">contato@ondapro.com.br</span>
-              </div>
+              <a href="#sobre" className="block hover:opacity-80 transition-opacity">
+                Sobre
+              </a>
+              <a href="#produtos" className="block hover:opacity-80 transition-opacity">
+                Catálogo
+              </a>
+              <a href="#formulario" className="block hover:opacity-80 transition-opacity">
+                Contato
+              </a>
+              <a href="#" className="block hover:opacity-80 transition-opacity">
+                Política de Privacidade
+              </a>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-bold text-base md:text-lg mb-4">Links Úteis</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#produtos" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Produtos
-                </a>
-              </li>
-              <li>
-                <a href="#como-funciona" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Como Funciona
-                </a>
-              </li>
-              <li>
-                <a href="#cadastro" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Solicitar Catálogo
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Política de Privacidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Termos Comerciais
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm md:text-base text-white/80 hover:text-white transition-all-300">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-base md:text-lg mb-4">Redes Sociais</h3>
-            <div className="flex gap-3 mb-6">
+          <div className="md:text-right">
+            <h3 className="font-bold mb-4">Redes Sociais</h3>
+            <div className="flex gap-4 justify-start md:justify-end">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/30 transition-all-300 transform hover:scale-110 border border-white/20"
-                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
               >
-                <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/30 transition-all-300 transform hover:scale-110 border border-white/20"
-                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
               >
-                <Instagram className="w-4 h-4 md:w-5 md:h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/30 transition-all-300 transform hover:scale-110 border border-white/20"
-                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
               >
-                <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
-            <p className="text-xs text-white/70 italic">
-              Atendimento exclusivo para CNPJ varejista
-            </p>
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 md:pt-8">
-          <div className="text-center">
-            <p className="text-xs md:text-sm text-white/80 mb-2">
-              CNPJ: 80.574.965/0001-27
-            </p>
-            <p className="text-xs md:text-sm text-white/70">
-              © Onda Pro. Todos os direitos reservados.
-            </p>
-          </div>
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10 text-center text-sm opacity-80">
+          © 2025 Onda Pro — Importadora de materiais escolares e office. CNPJ 80.574.965/0001-27
         </div>
       </div>
     </footer>
   );
-}
+};
