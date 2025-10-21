@@ -1,7 +1,13 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import SocialProof from './components/SocialProof';
+import Differentials from './components/Differentials';
+import ProductCatalog from './components/ProductCatalog';
+import Testimonials from './components/Testimonials';
+import BlogSection from './components/BlogSection';
 import ProcessSteps from './components/ProcessSteps';
 import LeadForm from './components/LeadForm';
+import About from './components/About';
 import Footer from './components/Footer';
 
 function App() {
@@ -10,12 +16,18 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <div className="py-20">
+        <SocialProof />
+        <Differentials />
+        <ProductCatalog />
+        <Testimonials />
+        <div id="como-funciona">
           <ProcessSteps />
         </div>
-        <div className="py-20">
+        <BlogSection />
+        <div id="cadastro">
           <LeadForm />
         </div>
+        <About />
       </main>
       <Footer />
     </div>
