@@ -35,29 +35,29 @@ export default function Differentials() {
   ];
 
   return (
-    <section id="diferenciais" className="bg-gradient-to-br from-gray-50 to-white py-12 md:py-24 px-3 md:px-6 w-full overflow-hidden">
+    <section id="diferenciais" className="bg-gradient-to-br from-gray-50 via-white to-gray-50 py-16 md:py-28 px-4 md:px-6 w-full overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 px-2">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 px-2 leading-tight tracking-tight">
             Nossos diferenciais fazem o lucro trabalhar pra você.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                className="group bg-white rounded-3xl p-7 md:p-9 shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-[#009bac]/20 hover:-translate-y-2"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#8c4091] to-[#9e61a4] rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                  <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-[#009bac] to-[#00d4e8] rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -66,12 +66,12 @@ export default function Differentials() {
         </div>
 
         <div className="text-center px-2">
-          <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl text-gray-700 mb-8 md:mb-10 max-w-3xl mx-auto font-medium leading-relaxed">
             Sem atravessador, sem enrolação. Só produto com giro rápido, boa apresentação e margem de verdade.
           </p>
           <button
             onClick={scrollToForm}
-            className="bg-[#009bac] hover:bg-[#008299] text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-[#009bac] to-[#00b8cc] hover:from-[#008299] hover:to-[#009bac] text-white font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             Quero ver os produtos campeões de venda
           </button>

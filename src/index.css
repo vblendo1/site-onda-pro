@@ -8,21 +8,59 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
   }
 
   * {
     box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#009bac] to-[#00b8cc] hover:from-[#008299] hover:to-[#009bac] text-white font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-white bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-[#8c4091] font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#8c4091] to-[#009bac] bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-28 px-4 md:px-6;
   }
 }
 
 @layer utilities {
   .transition-all-300 {
     transition: all 300ms ease-in-out;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }

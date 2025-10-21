@@ -74,35 +74,35 @@ export default function ProductCatalog() {
 
   return (
     <>
-      <section id="produtos" className="bg-white py-12 md:py-24 px-3 md:px-6 w-full overflow-hidden">
+      <section id="produtos" className="bg-gradient-to-b from-white to-gray-50 py-16 md:py-28 px-4 md:px-6 w-full overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-2">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 md:mb-6 px-2 leading-tight tracking-tight">
               Conheça os produtos que transformam prateleiras em lucro.
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+            <p className="text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto px-2 leading-relaxed">
               Escolha entre linhas que unem qualidade, apelo visual e rentabilidade.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {products.map((product, index) => {
               const Icon = product.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100"
+                  className="group bg-white rounded-3xl p-7 md:p-9 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-3"
                 >
-                  <div className={`w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center mb-4 md:mb-6`}>
-                    <Icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                  <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center mb-5 md:mb-7 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                     {product.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-5 leading-relaxed">
                     {product.description}
                   </p>
-                  <p className="text-[#009bac] font-bold text-base md:text-lg">
+                  <p className="text-[#009bac] font-extrabold text-lg md:text-xl">
                     {product.margin}
                   </p>
                 </div>
@@ -113,12 +113,12 @@ export default function ProductCatalog() {
           <div className="text-center px-2">
             <button
               onClick={() => setShowModal(true)}
-              className="bg-gradient-to-r from-[#8c4091] to-[#9e61a4] hover:shadow-2xl text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2 md:gap-3"
+              className="bg-gradient-to-r from-[#8c4091] to-[#9e61a4] hover:from-[#7a3680] hover:to-[#8c4091] hover:shadow-2xl text-white font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 md:gap-4 shadow-xl"
             >
-              <Download className="w-4 h-4 md:w-5 md:h-5" />
+              <Download className="w-5 h-5 md:w-6 md:h-6" />
               Baixar Catálogo Completo em PDF
             </button>
-            <p className="text-xs md:text-sm text-gray-500 mt-3 md:mt-4 italic">
+            <p className="text-sm md:text-base text-gray-600 mt-4 md:mt-5 italic font-medium">
               O catálogo é enviado direto pro seu WhatsApp em até 2 minutos.
             </p>
           </div>

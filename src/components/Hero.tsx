@@ -29,9 +29,9 @@ export default function Hero() {
   return (
     <section className="relative text-white pt-20 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 overflow-hidden min-h-screen flex items-center">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60 z-10"></div>
         <video
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2 scale-105"
           autoPlay
           muted
           loop
@@ -43,23 +43,23 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto relative z-20 w-full">
         <div className="max-w-4xl mx-auto text-center px-2">
-          <div className="min-h-[120px] md:min-h-[140px] mb-8 md:mb-10 flex items-center justify-center">
-            <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white transition-opacity duration-500 drop-shadow-2xl leading-tight px-4">
+          <div className="min-h-[120px] md:min-h-[160px] mb-10 md:mb-14 flex items-center justify-center">
+            <p className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white transition-opacity duration-500 text-shadow-lg leading-tight px-4 tracking-tight">
               {hooks[currentHook]}
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 justify-center max-w-md mx-auto">
+          <div className="flex flex-col gap-5 justify-center max-w-lg mx-auto">
             <button
               onClick={scrollToForm}
-              className="bg-[#009bac] hover:bg-[#008299] text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl w-full"
+              className="bg-gradient-to-r from-[#009bac] to-[#00b8cc] hover:from-[#008299] hover:to-[#009bac] text-white font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-[#009bac]/50 w-full"
             >
               Quero meu Catálogo Exclusivo
             </button>
 
             <button
               onClick={handleWhatsApp}
-              className="border-2 border-white bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-[#8c4091] font-bold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl w-full"
+              className="border-2 border-white/90 bg-white/15 backdrop-blur-lg text-white hover:bg-white hover:text-[#8c4091] font-bold px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl w-full"
             >
               Falar com o Comercial Agora
             </button>
